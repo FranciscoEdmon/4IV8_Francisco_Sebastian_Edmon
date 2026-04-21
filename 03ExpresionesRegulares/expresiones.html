@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/validaciones.js"></script>
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+    <header>
+        <h1>Expresiones Regulares</h1>
+    </header>
+    <section>
+        <h2>1. Inversión de capital</h2>
+        <input type="number" id = "capital" placeholder="Capital a invertir" step="any">
+        <button onclick="ejercicio1()">Calcular</button>
+        <div id = "result1" class="Resultado"></div>
+    </section>
+    <section>
+        <h2>2. Sueldo y Comisiones</h2>
+        <input type="number" id = "sueldo" placeholder="Sueldo base">
+        <input type="number" id="v1" placeholder="Venta 1">
+        <input type="number" id="v2" placeholder="Venta 2">
+        <input type="number" id="v3" placeholder="Venta 3">
+        <button onclick="ejercicio2()">Calcular</button>
+        <div id = "result2" class="Resultado"></div>
+    </section>
+    <section>
+        <h2>3. Descuento del 15%</h2>
+        <input type="number" id="totalcompra" placeholder="Total de la compra">
+        <button onclick="ejercicio3()">Aplicar Descuento</button>
+        <div id = "result3" class="Resultado"></div>
+    </section>
+    <section>
+        <h2>4. Calificación Final</h2>
+        <input type="number" id="p1" placeholder="Parcial 1" max="10">
+        <input type="number" id="p2" placeholder="Parcial 2" max="10">
+        <input type="number" id="p3" placeholder="Parcial 3" max="10">
+        <input type="number" id="exFinal" placeholder="Examen Final" max="10">
+        <input type="number" id="trabFinal" placeholder="Trabajo Final" max="10">
+        <button onclick="ejercicio4()">Calcular Nota</button>
+        <div id="res4" class="resultado"></div>
+    </section>
+    <section>
+        <h2>5. Porcentaje Hombres/Mujeres</h2>
+        <input type="number" id="numHombres" placeholder="Cantidad Hombres">
+        <input type="number" id="numMujeres" placeholder="Cantidad Mujeres">
+        <button onclick="ejercicio5()">Calcular %</button>
+        <div id="res5" class="resultado"></div>
+    </section>
+
+    <section>
+        <h2>6. Cálculo de Edad</h2>
+        <input type="date" id="fechaNacimiento">
+        <button onclick="ejercicio6()">Calcular Edad</button>
+        <div id="res6" class="resultado"></div>
+    </section>
+    <footer>
+        <a href="../index.html">Regresar</a>
+    </footer>
+</body>
+</html>
