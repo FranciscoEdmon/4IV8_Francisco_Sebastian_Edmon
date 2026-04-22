@@ -1,12 +1,6 @@
-/* Variables de tu paleta */
-:root {
-    --color-oscuro: #22577A;    /* Azul Océano */
-    --color-teal: #38A3A5;      /* Teal para botones */
-    --color-medio: #57CC99;     /* Verde para bordes */
-    --color-claro: #80ED99;     /* Verde suave */
-    --color-fondo: #C7F9CC;     /* Menta pálido para el fondo */
-}
-
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,76 +9,194 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-oscuro);
+    background-color: #f0fdfa; /* Un toque de verde muy sutil de fondo */
+    color: #22577A; /* Texto principal en el azul más oscuro */
     line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* =========================================
+   2. ENCABEZADO (HEADER)
+   ========================================= */
+header {
+    background: linear-gradient(135deg, #22577A 0%, #38A3A5 100%);
+    color: #ffffff;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 25px rgba(34, 87, 122, 0.2);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #80ED99; /* Acento verde claro */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.user-data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.data-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header {
-    width: 100%;
-    background-color: var(--color-oscuro);
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.label {
+    font-size: 0.75rem;
+    color: #C7F9CC; /* El verde más claro para etiquetas */
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 
-header h1 {
-    color: #ffffff;
-    font-size: 2rem;
-}
-
-#content {
-    max-width: 900px;
-    width: 90%;
-    margin: 40px 0;
-}
-
-#content > p {
+.info {
     font-size: 1.1rem;
-    margin-bottom: 20px;
-    text-align: center;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/* =========================================
+   3. TÍTULOS CON ICONOS (SECCIONES)
+   ========================================= */
+.titulo-practicas, 
+.titulo-tareas {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 20px 0;
+    color: #38A3A5;
+}
+
+.titulo-practicas::before {
+    content: '</>';
+    background-color: #38A3A5;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.titulo-tareas::before {
+    content: '✎';
+    background-color: #57CC99;
+    color: white;
+    font-size: 1rem;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.titulo-practicas::after, 
+.titulo-tareas::after {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background: #C7F9CC;
+    margin-left: 20px;
+}
+
+/* =========================================
+   4. TARJETAS DE CONTENIDO (ARTICLES)
+   ========================================= */
+#content_practicas, #content_tareas {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
 }
 
 .practice {
-    background-color: #ffffff; /* Fondo blanco para las tarjetas */
-    margin-bottom: 30px;
-    padding: 30px;
+    background-color: #ffffff;
     border-radius: 12px;
-    border-left: 8px solid var(--color-medio); /* Acento lateral con verde medio */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(56, 163, 165, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #C7F9CC;
 }
 
-.practice:hover {
-    transform: translateY(-5px);
+/* Prácticas: Borde lateral Turquesa */
+#content_practicas .practice {
+    border-left: 8px solid #38A3A5;
+}
+
+#content_practicas .practice:hover {
+    transform: translateX(10px);
+    background-color: #f9ffff;
+}
+
+/* Tareas: Borde superior Esmeralda */
+#content_tareas .practice {
+    border-top: 8px solid #57CC99;
+    background-color: #fafffb;
+}
+
+#content_tareas .practice:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(87, 204, 153, 0.15);
 }
 
 .practice h2 {
-    color: var(--color-oscuro);
-    margin-bottom: 10px;
+    color: #22577A;
+    margin-bottom: 12px;
 }
 
 .practice p {
-    margin-bottom: 20px;
     color: #444;
+    margin-bottom: 20px;
 }
 
-/* Estilo para los enlaces tipo botón */
+/* =========================================
+   5. BOTONES (LINKS)
+   ========================================= */
 .practice a {
     display: inline-block;
-    background-color: var(--color-teal);
     color: white;
-    text-decoration: none;
     padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#content_practicas .practice a {
+    background-color: #38A3A5;
+}
+
+#content_tareas .practice a {
+    background-color: #57CC99;
 }
 
 .practice a:hover {
-    background-color: var(--color-oscuro);
-    box-shadow: 0 4px 12px rgba(56, 163, 165, 0.4);
+    background-color: #22577A;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   6. RESPONSIVE
+   ========================================= */
+@media (max-width: 600px) {
+    header { padding: 2rem 1rem; }
+    header h1 { font-size: 1.5rem; }
+    .user-data { flex-direction: column; gap: 15px; }
 }

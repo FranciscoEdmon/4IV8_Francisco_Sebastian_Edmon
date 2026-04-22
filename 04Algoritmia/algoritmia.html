@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/algorimtia.js"></script>
+    <title>Ejercicios de Algoritmia</title>
+</head>
+<body>
+    <div class="container">
+        <div class="problem-container">
+            <h2 class="problema-titulo">
+                Problema 1
+            </h2>
+            <h3>Dada una lista de palabras separads por un espacio, invierte el orden de dichas palabras. Las palabras puedes estar separads unicamente por espacios.
+            </h3>
+            <div class="problem-content">
+                <input type="text" class="problem-input" placeholder="Ingresa las palabras separadas por espacios." id="p1-input">
+                <button type="button" class="problem-button" style="margin-top: 1rem;" onclick="">Invertir Palabras</button>
+                <pre class="problem-output" id="p1-output">Esperando datos...</pre>
+            </div>
+        </div>
+        <div class="problem-container">
+            <h2 class="problema-titulo">
+                Problema 2
+            </h2>
+            <h3>Dados dos vectores <em>v1=(x1, x2, ..., xn) y v2=(y1, y2, ..., yn)</em> hy teniendo permitido permutar el contenido de cada vector, encuentra la permutación de ambos vectores que maximice el producto escalar entre ambos vectores.
+                <br>
+                (EL producto escalar se  forma de la siguiente manera: <em>x1*y1 + x2*y2 + x3*y3 + ... + xn*yn</em>)
+            </h3>
+            <div class="problem-content">
+                <div class = "table" style = "width: 100%; display: flex; justify-content: center;">
+                    <table class="problem-table" style="width: 42% ">
+                        <thead>
+                            <tr>
+                                <th><em>X</em></th>
+                                <th><em>#</em></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>x1</td>
+                                    <td><input type="number" class="problem-input" id="p2-x1"></td>
+                                </tr>
+                                <tr>
+                                    <td>x2</td>
+                                    <td><input type="number" class="problem-input" id="p2-x2"></td>
+                                </tr>
+                                <tr>
+                                    <td>x3</td>
+                                    <td><input type="number" class="problem-input" id="p2-x3"></td>
+                                </tr>
+                                <tr>
+                                    <td>x4</td>
+                                    <td><input type="number" class="problem-input" id="p2-x4"></td>
+                                </tr>
+                                <tr>
+                                    <td>x5</td>
+                                    <td><input type="number" class="problem-input" id="p2-x5"></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <table class="problem-table" style="width: 42% ">
+                        <thead>
+                            <tr>
+                                <th><em>y</em></th>
+                                <th><em>#</em></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>y1</td>
+                                    <td><input type="number" class="problem-input" id="p2-y1"></td>
+                                </tr>
+                                <tr>
+                                    <td>y2</td>
+                                    <td><input type="number" class="problem-input" id="p2-y2"></td>
+                                </tr>
+                                <tr>
+                                    <td>y3</td>
+                                    <td><input type="number" class="problem-input" id="p2-y3"></td>
+                                </tr>
+                                <tr>
+                                    <td>y4</td>
+                                    <td><input type="number" class="problem-input" id="p2-y4"></td>
+                                </tr>
+                                <tr>
+                                    <td>y5</td>
+                                    <td><input type="number" class="problem-input" id="p2-y5"></td>
+                                </tr>
+                        </tbody>
+                    </table>      
+                <button type="button" class="problem-button" style="margin-top: 1rem;" onclick="problema2()">Calcular el producto escalar</button>
+                <pre class="problem-output" id="p2-output">Esperando datos...</pre>
+            </div>
+        </div>
+        <div class="problem-container">
+            <h2 class="problema-titulo">
+                Problema 3
+            </h2>
+            <h3>Dada una lista de palabras, encontrar la palabra con más caracteres unicos.
+                <br>
+                Por ejemplo: CASA = 3 (c,a,s), PERRO = 4 (p,e,r,o)
+                <br>
+                Considera solamente el alfabeto A-Z, en mayusculas, las palabras ingresadas deberan estar separadas por una coma. No se aceptan espacios.      
+            </h3>
+            <div class="problem-content">
+                <input type="text" class="problem-input" placeholder="Ingresa las palabras separadas por comas." id="p3-input">
+                <button type="button" class="problem-button" style="margin-top: 1rem;" onclick="">Calcular palabras</button>
+                <pre class="problem-output" id="p3-output">Esperando datos...</pre>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="../index.html">Regresar</a>
+    </footer>
+</body>
+</html>
