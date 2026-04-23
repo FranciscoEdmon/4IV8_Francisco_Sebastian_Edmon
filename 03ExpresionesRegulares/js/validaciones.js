@@ -10,12 +10,12 @@ function ejercicio1() {
     
     const ganancia = capital * 0.02;
     const total = parseFloat(capital) + ganancia;
-    document.getElementById('res1').innerText = `Ganancia: $${ganancia.toFixed(2)}. Total: $${total.toFixed(2)}`;
+    document.getElementById('result1').innerText = `Ganancia: $${ganancia.toFixed(2)}. Total: $${total.toFixed(2)}`;
 }
 
 // 2. Comisiones
 function ejercicio2() {
-    const sb = document.getElementById('sueldoBase').value;
+    const sb = document.getElementById('sueldo').value;
     const v1 = document.getElementById('v1').value;
     const v2 = document.getElementById('v2').value;
     const v3 = document.getElementById('v3').value;
@@ -26,16 +26,16 @@ function ejercicio2() {
 
     const comision = (parseFloat(v1) + parseFloat(v2) + parseFloat(v3)) * 0.10;
     const total = parseFloat(sb) + comision;
-    document.getElementById('res2').innerText = `Comisiones: $${comision.toFixed(2)}. Total a recibir: $${total.toFixed(2)}`;
+    document.getElementById('result2').innerText = `Comisiones: $${comision.toFixed(2)}. Total a recibir: $${total.toFixed(2)}`;
 }
 
 // 3. Descuento (15%)
 function ejercicio3() {
-    const total = document.getElementById('totalCompra').value;
+    const total = document.getElementById('totalcompra').value;
     if (!validarPositivo(total)) return alert("Ingresa un monto de compra válido");
 
     const pagoFinal = total * 0.85;
-    document.getElementById('res3').innerText = `Total a pagar: $${pagoFinal.toFixed(2)}`;
+    document.getElementById('result3').innerText = `Total a pagar: $${pagoFinal.toFixed(2)}`;
 }
 
 // 4. Calificación Final (55% parciales, 30% examen, 15% trabajo)
@@ -46,8 +46,8 @@ function ejercicio4() {
     const ef = document.getElementById('exFinal').value;
     const tf = document.getElementById('trabFinal').value;
 
-    if ([p1, p2, p3, ef, tf].some(v => !validarPositivo(v))) {
-        return alert("Ingresa calificaciones válidas");
+    if ([p1, p2, p3, ef, tf].some(v => !validarPositivo(v) || parseFloat(v) > 10)) {
+        return alert("Ingresa calificaciones válidas (0-10)");
     }
 
     const promedioP = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3)) / 3;

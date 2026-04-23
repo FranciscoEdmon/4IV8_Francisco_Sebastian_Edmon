@@ -1,6 +1,3 @@
-/* =========================================
-   1. CONFIGURACIÓN GENERAL
-   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +12,6 @@ body {
     padding: 40px 20px;
 }
 
-/* =========================================
-   2. ENCABEZADO (HEADER)
-   ========================================= */
 header {
     background: linear-gradient(135deg, #22577A 0%, #38A3A5 100%);
     color: #ffffff;
@@ -33,7 +27,7 @@ header h1 {
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid #80ED99; /* Acento verde claro */
+    border-bottom: 3px solid #80ED99;
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -54,7 +48,7 @@ header h1 {
 
 .label {
     font-size: 0.75rem;
-    color: #C7F9CC; /* El verde más claro para etiquetas */
+    color: #C7F9CC;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 5px;
@@ -67,9 +61,6 @@ header h1 {
     color: #ffffff;
 }
 
-/* =========================================
-   3. TÍTULOS CON ICONOS (SECCIONES)
-   ========================================= */
 .titulo-practicas, 
 .titulo-tareas {
     font-size: 1.4rem;
@@ -114,9 +105,6 @@ header h1 {
     margin-left: 20px;
 }
 
-/* =========================================
-   4. TARJETAS DE CONTENIDO (ARTICLES)
-   ========================================= */
 #content_practicas, #content_tareas {
     max-width: 900px;
     margin: 0 auto 50px auto;
@@ -132,7 +120,6 @@ header h1 {
     border: 1px solid #C7F9CC;
 }
 
-/* Prácticas: Borde lateral Turquesa */
 #content_practicas .practice {
     border-left: 8px solid #38A3A5;
 }
@@ -142,7 +129,6 @@ header h1 {
     background-color: #f9ffff;
 }
 
-/* Tareas: Borde superior Esmeralda */
 #content_tareas .practice {
     border-top: 8px solid #57CC99;
     background-color: #fafffb;
@@ -163,9 +149,6 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* =========================================
-   5. BOTONES (LINKS)
-   ========================================= */
 .practice a {
     display: inline-block;
     color: white;
@@ -192,9 +175,6 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* =========================================
-   6. RESPONSIVE
-   ========================================= */
 @media (max-width: 600px) {
     header { padding: 2rem 1rem; }
     header h1 { font-size: 1.5rem; }
