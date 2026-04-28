@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: #f0fdfa; /* Un toque de verde muy sutil de fondo */
-    color: #22577A; /* Texto principal en el azul más oscuro */
+    background-color: #f0fdfa;
+    color: #22577A;
     line-height: 1.6;
     padding: 40px 20px;
 }
