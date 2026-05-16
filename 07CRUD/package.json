@@ -1,0 +1,20 @@
+{
+  "name": "07crd",
+  "version": "1.0.0",
+  "description": "Ejmeplo de crud  en ventanillaJS",
+  "keywords": [
+    "crud",
+    "mysql",
+    "nodejs"
+  ],
+  "license": "ISC",
+  "author": "Edmon",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
