@@ -1,5 +1,5 @@
 const express = require('express');
-// Importamos directamente la versión con promesas y usamos una URI de conexión (String)
+// Importamos directamente la versión con promesas y usamos una URI de conexión (String) 
 const db = require('mysql2/promise').createPool('mysql://root:R9m!xT2#qL7v@localhost/pnt_crud');
 const app = express();
 app.use(express.json());
